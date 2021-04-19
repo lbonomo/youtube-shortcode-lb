@@ -88,8 +88,16 @@ function yslb_shortcode( $atts ) {
 	}
 }
 
-
-add_action( 'init', 'yslb_register_shortcode' );
-function yslb_register_shortcode() {
-	add_shortcode( 'youtube-shortcode', 'yslb_shortcode' );
+add_shortcode( 'youtube-shortcode', 'yslb_shortcode' );
+add_action( 'init', 'yslb_load_textdomain' );
+  
+/**
+ * Load plugin textdomain.
+ */
+function yslb_load_textdomain() {
+	load_plugin_textdomain( 
+		'youtube-shortcode-lb', 
+		false,
+		 dirname( plugin_basename( __FILE__ ) ) . '/languages' 
+	);
 }
