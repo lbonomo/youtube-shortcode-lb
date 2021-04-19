@@ -1,0 +1,22 @@
+:root {
+    --error-bg-color:  rgb(255, 233, 233);
+}
+
+.yslb-container {
+    display: flex;
+    margin: 1rem auto;
+    width: 75vw;
+    min-height: 300px;
+}
+
+iframe.yslb-iframe {
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.yslb-container-error {
+    background-color: var(--error-bg-color);
+    padding: 0.5rem 1rem;
+}
