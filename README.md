@@ -9,14 +9,14 @@
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
-Put Youtube Video into a post whith a shortcode
+Put Youtube Video into a post with a shortcode
 
 ## Description ##
 This plugin permit add a Youtube video in a post, whith a shortcode. 
  - If the shortcode receive a YouTube Video ID (Ej: [youtube-shortcode id="f1nxZBAMpUs"]) as an attribute, 
    the shortcode display a YouTube Video Player in the post.
  - If the shortcode receive a Video URL (https://www.youtube.com/watch?v=f1nxZBAMpUs) as one of its attributes, 
-   when this attribute is present, the shortcode display an HTML5 Video Player in the post.
+   the shortcode display an HTML5 Video Player in the post.
 
 ## Installation ##
 
