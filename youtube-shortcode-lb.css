@@ -1,22 +1,181 @@
+/**
+ * YouTube Shortcode Plugin Styles
+ * Version: 2.0.0
+ */
+
 :root {
-    --error-bg-color:  rgb(255, 233, 233);
+    --error-bg-color: rgb(255, 233, 233);
+    --error-border-color: rgb(255, 150, 150);
+    --error-text-color: #c33;
+    --container-max-width: 900px;
+    --container-margin: 1.5rem auto;
+    --padding-default: 1rem;
 }
 
+/**
+ * Container for YouTube videos
+ * Uses aspect-ratio to maintain 16:9 proportions
+ */
 .yslb-container {
-    display: flex;
-    margin: 1rem auto;
-    width: 75vw;
-    min-height: 300px;
-}
-
-iframe.yslb-iframe {
-    height: auto;
+    position: relative;
     width: 100%;
-    display: block;
-    margin: 0 auto;
+    max-width: var(--container-max-width);
+    margin: var(--container-margin);
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/**
+ * Responsive iframe wrapper
+ * Maintains 16:9 aspect ratio across all screen sizes
+ */
+.yslb-container::before {
+    content: '';
+    display: block;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+/**
+ * YouTube iframe with lazy loading and responsive sizing
+ */
+iframe.yslb-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 4px;
+    display: block;
+    margin: 0;
+}
+
+/**
+ * Error container with improved accessibility
+ */
 .yslb-container-error {
     background-color: var(--error-bg-color);
-    padding: 0.5rem 1rem;
+    border-left: 4px solid var(--error-border-color);
+    padding: var(--padding-default);
+    margin: var(--container-margin);
+    border-radius: 4px;
+    max-width: var(--container-max-width);
+    box-sizing: border-box;
+}
+
+.yslb-container-error h3 {
+    margin-top: 0;
+    color: var(--error-text-color);
+    font-size: 1.1em;
+}
+
+.yslb-container-error p {
+    margin: 0.5rem 0;
+    color: #666;
+    font-size: 0.95em;
+}
+
+.yslb-container-error ul {
+    margin: 0.5rem 0 0 1.5rem;
+    padding: 0;
+}
+
+.yslb-container-error li {
+    margin: 0.3rem 0;
+    list-style-type: disc;
+}
+
+.yslb-container-error code {
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.yslb-container-error small {
+    color: #999;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/**
+ * Tablet and larger screens
+ */
+@media (min-width: 768px) {
+    :root {
+        --container-margin: 2rem auto;
+        --padding-default: 1.25rem;
+    }
+    
+    .yslb-container {
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+}
+
+/**
+ * Desktop screens
+ */
+@media (min-width: 1024px) {
+    :root {
+        --container-max-width: 100%;
+    }
+}
+
+/**
+ * Mobile-first: Extra small screens
+ */
+@media (max-width: 480px) {
+    :root {
+        --container-margin: 0.75rem auto;
+        --padding-default: 0.75rem;
+    }
+    
+    .yslb-container-error {
+        font-size: 0.9em;
+    }
+    
+    .yslb-container-error h3 {
+        font-size: 1em;
+    }
+    
+    .yslb-container-error code {
+        word-break: break-all;
+    }
+}
+
+/**
+ * Dark mode support (respects user preferences)
+ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --error-bg-color: rgb(60, 30, 30);
+        --error-border-color: rgb(200, 100, 100);
+        --error-text-color: #ff6666;
+    }
+    
+    .yslb-container-error {
+        color: #ccc;
+    }
+    
+    .yslb-container-error p {
+        color: #aaa;
+    }
+    
+    .yslb-container-error code {
+        background-color: #222;
+        color: #ff9;
+    }
+}
+
+/**
+ * Reduce motion for accessibility
+ */
+@media (prefers-reduced-motion: reduce) {
+    .yslb-container {
+        animation: none;
+        transition: none;
+    }
 }
