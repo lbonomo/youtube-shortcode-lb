@@ -2,10 +2,10 @@
 Contributors: lbonomo
 Donate link: https://paypal.me/lucasbonomo
 Tags: video, shortcode, youtube, embed, responsive, accessibility, lazy-loading
-Requires at least: 4.5
-Tested up to: 6.6
-Requires PHP: 7.2
-Stable tag: 2.0.0
+Requires at least: 7.0
+Tested up to: 7.0
+Requires PHP: 8.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,9 @@ Yes! All videos are responsive and work perfectly on mobile devices.
 4. WooCommerce product page with embedded video
 
 == Changelog ==
+= 2.1.0 =
+* Minimum requirements raised: WordPress 7.0 and PHP 8.0
+* Tested up to WordPress 7.0
 
 = 2.0.0 =
 * Complete rewrite following WordPress best practices
@@ -130,6 +133,9 @@ Yes! All videos are responsive and work perfectly on mobile devices.
 * Basic shortcode functionality
 
 == Upgrade Notice ==
+= 2.1.0 =
+Requires WordPress 7.0+ and PHP 8.0+. Update your environment before upgrading.
+
 
 = 2.0.0 =
 Major update with many new features, improved security, and better accessibility. Strongly recommended for all users.

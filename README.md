@@ -3,10 +3,10 @@
 **Contributors:** @lbonomo  
 **Donate link:** https://paypal.me/lucasbonomo  
 **Tags:** video, shortcode, youtube, embed, responsive  
-**Requires at least:** 4.5  
-**Tested up to:** 6.6  
-**Requires PHP:** 7.2  
-**Stable tag:** 2.0.0  
+**Requires at least:** 7.0  
+**Tested up to:** 7.0  
+**Requires PHP:** 8.0  
+**Stable tag:** 2.1.0  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -205,6 +205,10 @@ No. The plugin uses lazy loading (`loading="lazy"`) to improve page performance.
 Yes. The plugin follows WCAG 2.1 guidelines with proper ARIA labels, semantic HTML, and support for keyboard navigation.
 
 ## Changelog ##
+### 2.1.0 ###
+* Minimum requirements raised: WordPress 7.0 and PHP 8.0
+* Tested up to WordPress 7.0
+
 
 ### 2.0.0 ###
 * Complete rewrite following WordPress best practices

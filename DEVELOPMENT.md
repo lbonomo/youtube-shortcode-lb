@@ -9,8 +9,8 @@
 
 ## Requirements
 
-- WordPress 4.5 or higher
-- PHP 7.2 or higher
+- WordPress 7.0 or higher
+- PHP 8.0 or higher
 - Modern browser with developer tools
 
 ## Local Testing
