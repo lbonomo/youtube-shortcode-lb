@@ -7,9 +7,9 @@
  * Author URI:      https://lucasbonomo.com/
  * Text Domain:     youtube-shortcode-lb
  * Domain Path:     /languages
- * Version:         2.0.0
- * Requires at least: 4.5
- * Requires PHP:    7.2
+ * Version:         2.1.0
+ * Requires at least: 7.0
+ * Requires PHP:    8.0
  * License:         GPLv2 or later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Define plugin constants
  */
 define( 'YSLB_PLUGIN_NAME', 'Youtube Shortcode' );
-define( 'YSLB_PLUGIN_VERSION', '2.0.0' );
+define( 'YSLB_PLUGIN_VERSION', '2.1.0' );
 define( 'YSLB_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'YSLB_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'YSLB_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
